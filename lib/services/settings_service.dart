@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../theme/maze_themes.dart';
 
 /// Persisted settings + stats for Maze Muncher. Survives app restarts.

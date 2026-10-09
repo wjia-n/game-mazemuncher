@@ -322,11 +322,11 @@ class MazeEngine extends ChangeNotifier {
   }
 
   // ------------------------------------------------------------ run control
-  void startRun({required GameMode m, required MazeDifficulty d}) {
+  void startRun({required GameMode mode, required MazeDifficulty difficulty}) {
     _cancelTimers();
-    mode = m;
-    difficulty = d;
-    _tune = difficultyTunings[d]!;
+    this.mode = mode;
+    this.difficulty = difficulty;
+    _tune = difficultyTunings[difficulty]!;
     score = 0;
     lives = _tune.lives;
     mazeIndex = 0;

@@ -327,7 +327,7 @@ class MazeDynamicPainter extends CustomPainter {
     final rr = r * scale;
 
     // Shadow.
-    canvas.drawEllipse(
+    canvas.drawOval(
         Rect.fromCenter(
             center: c + Offset(0, rr * 0.9), width: rr * 1.5, height: rr * 0.4),
         Paint()..color = Colors.black.withValues(alpha: 0.35));
@@ -546,7 +546,7 @@ class MazeDynamicPainter extends CustomPainter {
                 : theme.frightBlue)
             : theme.ghostColors[index % theme.ghostColors.length]);
     // Shadow.
-    canvas.drawEllipse(
+    canvas.drawOval(
         Rect.fromCenter(
             center: c + Offset(0, r * 0.95), width: r * 1.5, height: r * 0.38),
         Paint()..color = Colors.black.withValues(alpha: 0.35));
@@ -615,7 +615,7 @@ class MazeDynamicPainter extends CustomPainter {
     } else {
       for (final dx in [-0.32, 0.32]) {
         final ec = c + Offset(r * dx, -r * 0.28) + look;
-        canvas.drawEllipse(
+        canvas.drawOval(
             Rect.fromCenter(center: ec, width: r * 0.42, height: r * 0.52),
             Paint()..color = Colors.white);
         canvas.drawCircle(ec + look, r * 0.20,
