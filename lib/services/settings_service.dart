@@ -73,7 +73,7 @@ class MazeSettings extends ChangeNotifier {
   int campaignsCompleted = 0;
   int totalPellets = 0;
   int totalGhosts = 0;
-  bool isPro = false;
+  bool isPro = true; // everything unlocked — no Pro version
 
   /// Custom theme colors (ARGB ints).
   Map<String, int> customColors = Map.of(_defaultCustomColors);
@@ -159,7 +159,7 @@ class MazeSettings extends ChangeNotifier {
     campaignsCompleted = p.getInt(_kWins) ?? 0;
     totalPellets = p.getInt(_kPellets) ?? 0;
     totalGhosts = p.getInt(_kGhosts) ?? 0;
-    isPro = p.getBool(_kIsPro) ?? false;
+    isPro = true; // everything unlocked
     for (final k in _defaultCustomColors.keys) {
       customColors[k] = p.getInt('$_kCustomPrefix$k') ?? _defaultCustomColors[k]!;
     }
