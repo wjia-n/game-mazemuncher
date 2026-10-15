@@ -409,7 +409,7 @@ class MuncherStyles {
     'Sir Chompalot',
     'Chef Munch',
     'Astro Muncher',
-    'Ninja Nibbler',
+    'Shadow Nibbler',
     'Pumpkin Pal',
     'Frosty',
   ];
