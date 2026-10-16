@@ -3,6 +3,7 @@ import '../services/audio_service.dart';
 import '../services/settings_service.dart';
 import '../theme/maze_craft.dart';
 import '../theme/maze_themes.dart';
+import '../transfer/transfer_ui.dart';
 
 /// Settings: renameable player profile, audio controls, lifetime stats.
 class SettingsScreen extends StatefulWidget {
@@ -82,6 +83,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+              TransferSaveTile(gameSlug: 'mazemuncher'),
                   Text('PLAYER', style: MazeCraft.label(13, theme: t)),
                   const SizedBox(height: 8),
                   Container(
